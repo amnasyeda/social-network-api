@@ -50,7 +50,7 @@ removeUser ({ params, body }, res) {
     )
       .then((dbUserData) => {
         if (!dbUserData) {
-          res.status(404).json({ message: 'No user found with this userId' });
+          res.status(404).json({ message: 'No user found with this Id' });
           return;
         }
         res.json(dbUserData);
@@ -67,7 +67,7 @@ removeUser ({ params, body }, res) {
     )
       .then((dbUserData) => {
         if (!dbUserData) {
-          res.status(404).json({ message: 'No user found with this userId' });
+          res.status(404).json({ message: 'No user found with this Id' });
           return;
         }
 

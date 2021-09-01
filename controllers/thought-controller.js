@@ -1,12 +1,9 @@
 const { Thought, Reaction, User } = require('../models');
-    getAllThoughts(req, res) {
-    Thought.find({})
-    .select("-__v")
-    .sort({ _id: -1 })
-    .then((dbThoughtData) => res.json(dbThoughtData))
-    .catch((err) => {
-        console.log(err);
+
+const ThoughtController = {
     
+  createThought({ body: {username, thoughtText, userId} }, res) {
+
     Thought.create({thoughtText,username})
     .then((data) =>
       User.findByIdAndUpdate(userId, {
@@ -25,14 +22,12 @@ const { Thought, Reaction, User } = require('../models');
       .catch((err) => res.json(err));
   },
 
-  getThoughtById({ params }, res) {
-    Thought.findOne({ id: params.id })
-    .then(dbUserData => res.json(dbUserData))
-    .catch(err => {
-        console.log(err)
-        res.status(400).json(err)
-    })
-},
+  findOneThough({ params, body }, res) {
+    Thought.findById(params.Id)
+     .populate({ path: 'reactions', select: '-__v' })
+      .then((dbdata) => res.json(dbdata))
+      .catch((err) => res.json(err));
+  },
 
   updateOneThough({ params, body }, res) {
     Thought.findByIdAndUpdate(params.Id)
