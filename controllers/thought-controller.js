@@ -1,8 +1,8 @@
 const { Thought, Reaction, User } = require('../models');
-
-const thoughtController = {
-
-  createThought({ body: {username, thoughtText, userId} }, res) {
+    getAllThoughts(req, res) {
+    Thought.find({})
+    .then(dbUserData => res.json(dbUserData))
+    .catch(err => {
     
     Thought.create({thoughtText,username})
     .then((data) =>

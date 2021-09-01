@@ -1,4 +1,9 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
+
+const validateEmail = function (email) {
+    var emailRegex = /.+\@.+\..+/;
+    return emailRegex.test(email.text);
+}
 
 const UserSchema = new Schema(
     { 
