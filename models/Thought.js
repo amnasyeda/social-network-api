@@ -17,7 +17,6 @@ const thoughtSchema = new Schema(
       required: true,
       default: Date.now,
       get: (createdAtVal) => dateFormat(createdAtVal),
-    }
   },
   reactions: [{ type: Schema.Types.ObjectId, ref: 'Reaction' }]
 },
