@@ -7,4 +7,4 @@ router.route('/:Id').get(thought.findOneThough).put(thought.updateOneThough).del
 router.route('/:thoughtId/reactions').post(thought.addReaction)
 router.route('/:thoughtId/reactions/:reactionId').delete(thought.removeReaction)
 
-module.exports=router;
+module.exports = router;
