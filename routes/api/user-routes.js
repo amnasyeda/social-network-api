@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const user = require('../../controllers/user-controllers')
+const user = require('../../controllers/user-controller')
 router.route('/').post(user.createUser).get(user.findUsers);
 router.route('/:Id').get(user.findOne).delete(user.removeUser).put(user.updateUser);
 
