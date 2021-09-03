@@ -18,6 +18,7 @@
   "homepage": "https://github.com/amnasyeda/social-network-api#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^6.0.3"
+    "i": "^0.3.6",
+    "mongoose": "^6.0.4"
   }
 }

@@ -8,21 +8,20 @@ const thoughtSchema = new Schema(
       required: true,
       len:[1,280]
     },
-    username: {
-      type: String,
-      required: true
-    },
     createdAt: {
       type: Date,
       required: true,
       default: Date.now,
       get: (createdAtVal) => dateFormat(createdAtVal),
   },
+  username: {
+    type: String,
+    required: true
+  },
   reactions: [{ type: Schema.Types.ObjectId, ref: 'Reaction' }]
 },
 
 );
 
-const Thought = model('Thought', ThoughtSchema);
-
+const Thought = model('Thought', thoughtSchema);
 module.exports = Thought;
