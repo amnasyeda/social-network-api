@@ -1,4 +1,4 @@
-# Social Network Api
+# Social Network API
 
 ## Description
 The Backend for a social networking application which allows the user to create a friends' list, share their own thoughts, and react to a friend's thoughts. 
@@ -17,9 +17,10 @@ the user must run `npm init` followed by `npm install i` to install the required
 ## Usage
 The application is a backend database for which API routes are explored in Insomnia. 
 
-### insert image
+<img width="1358" alt="social-network-api" src="https://user-images.githubusercontent.com/81194686/132270742-6302592a-d3f5-4e7d-b8fb-e46f44e090a7.png">
 
-* [Walkthough Video](https://www.youtube.com/watch?v=ky5rWyDimuo/)
+
+[Walkthough Video](https://www.youtube.com/watch?v=ky5rWyDimuo/)
 
 ## Tools
 * MongoDB
